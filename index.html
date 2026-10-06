@@ -19,7 +19,7 @@
       overflow-x: hidden;
     }
 
-    /* Foto de fundo fixa */
+    
     .bg-image-overlay {
       position: fixed;
       top: 0;
@@ -27,13 +27,13 @@
       width: 100vw;
       height: 100vh;
       background: 
-        linear-gradient(rgba(7, 9, 14, 0.72), rgba(7, 9, 14, 0.82)),
+        linear-gradient(rgba(7, 9, 14, 0.70), rgba(7, 9, 14, 0.80)),
         url('fundo.png') no-repeat center center / cover;
       z-index: 0;
       pointer-events: none;
     }
 
-    /* Canvas 3D transparente */
+    
     #webgl {
       position: fixed;
       top: 0;
@@ -55,7 +55,7 @@
       justify-content: space-between;
       align-items: center;
       z-index: 100;
-      backdrop-filter: blur(14px);
+      backdrop-filter: blur(12px);
       background: rgba(7, 9, 14, 0.75);
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
@@ -70,11 +70,6 @@
 
     .brand span {
       color: #00f2fe;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 28px;
     }
 
     .nav-link {
@@ -97,12 +92,17 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding: 120px 10% 80px;
+      padding: 100px 10%;
     }
 
     .section-left {
       align-items: flex-start;
       text-align: left;
+    }
+
+    .section-right {
+      align-items: flex-end;
+      text-align: right;
     }
 
     .section-center {
@@ -121,7 +121,7 @@
 
     h2 {
       font-size: 3.2rem;
-      max-width: 650px;
+      max-width: 580px;
       line-height: 1.15;
       margin-bottom: 16px;
       background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
@@ -131,10 +131,10 @@
       text-shadow: 0 4px 20px rgba(0,0,0,0.5);
     }
 
-    p.lead {
+    p {
       color: #cbd5e1;
       font-size: 1.15rem;
-      max-width: 520px;
+      max-width: 480px;
       line-height: 1.6;
       text-shadow: 0 2px 10px rgba(0,0,0,0.5);
     }
@@ -158,78 +158,6 @@
       box-shadow: 0 6px 30px rgba(0, 242, 254, 0.5);
     }
 
-    /* =========================================================
-       CARDS DE SERVIÇOS (GLASSMORPHISM)
-    ========================================================= */
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
-      width: 100%;
-      max-width: 1100px;
-      margin-top: 40px;
-      pointer-events: auto;
-      text-align: left;
-    }
-
-    .service-card {
-      background: rgba(15, 23, 42, 0.72);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(14px);
-      border-radius: 16px;
-      padding: 32px 26px;
-      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .service-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 3px;
-      background: linear-gradient(90deg, #4facfe, #00f2fe);
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-
-    .service-card:hover {
-      transform: translateY(-6px);
-      border-color: rgba(0, 242, 254, 0.4);
-      box-shadow: 0 16px 40px rgba(0, 242, 254, 0.12);
-    }
-
-    .service-card:hover::before {
-      opacity: 1;
-    }
-
-    .service-icon {
-      font-size: 2rem;
-      margin-bottom: 16px;
-      display: inline-block;
-      padding: 10px;
-      background: rgba(0, 242, 254, 0.1);
-      border-radius: 12px;
-      color: #00f2fe;
-    }
-
-    .service-card h3 {
-      font-size: 1.35rem;
-      margin-bottom: 10px;
-      color: #ffffff;
-    }
-
-    .service-card p {
-      font-size: 0.95rem;
-      color: #94a3b8;
-      line-height: 1.6;
-    }
-
-    /* =========================================================
-       FORMULÁRIO DE CONTATO
-    ========================================================= */
     .contact-container {
       width: 100%;
       max-width: 520px;
@@ -324,99 +252,7 @@
       border: 1px solid rgba(239, 68, 68, 0.4);
     }
 
-    /* =========================================================
-       RODAPÉ (FOOTER)
-    ========================================================= */
-    footer {
-      position: relative;
-      z-index: 10;
-      background: rgba(4, 6, 10, 0.92);
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
-      padding: 50px 10% 30px;
-      backdrop-filter: blur(16px);
-      pointer-events: auto;
-    }
-
-    .footer-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      flex-wrap: wrap;
-      gap: 30px;
-      margin-bottom: 40px;
-    }
-
-    .footer-info {
-      max-width: 380px;
-    }
-
-    .footer-info p {
-      color: #94a3b8;
-      font-size: 0.95rem;
-      line-height: 1.6;
-      margin-top: 12px;
-    }
-
-    .footer-status {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(34, 197, 94, 0.12);
-      border: 1px solid rgba(34, 197, 94, 0.3);
-      padding: 6px 14px;
-      border-radius: 20px;
-      font-size: 0.82rem;
-      color: #4ade80;
-      margin-top: 16px;
-    }
-
-    .status-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: #4ade80;
-      box-shadow: 0 0 10px #4ade80;
-    }
-
-    .footer-nav {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .footer-nav-title {
-      font-size: 0.85rem;
-      font-weight: 700;
-      color: #ffffff;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      margin-bottom: 8px;
-    }
-
-    .footer-nav a {
-      color: #94a3b8;
-      text-decoration: none;
-      font-size: 0.92rem;
-      transition: color 0.2s;
-    }
-
-    .footer-nav a:hover {
-      color: #00f2fe;
-    }
-
-    .footer-bottom {
-      border-top: 1px solid rgba(255, 255, 255, 0.06);
-      padding-top: 24px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 15px;
-      font-size: 0.88rem;
-      color: #64748b;
-    }
-
-    /* Botão Flutuante do WhatsApp */
+   
     .whatsapp-float {
       position: fixed;
       bottom: 28px;
@@ -450,79 +286,51 @@
 
     @media (max-width: 768px) {
       h2 { font-size: 2.2rem; }
-      nav { padding: 15px 6%; }
-      .nav-links { display: none; }
-      section { padding: 100px 6% 60px; }
       .contact-container { padding: 20px; }
-      .footer-top { flex-direction: column; }
       .whatsapp-float { bottom: 20px; right: 20px; width: 52px; height: 52px; }
       .whatsapp-float svg { width: 26px !important; height: 26px !important; }
     }
   </style>
 
-  <!-- CDNs Three.js e GSAP -->
+  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 <body>
 
-  <!-- Foto de Fundo Fixa -->
+ 
   <div class="bg-image-overlay"></div>
 
-  <!-- Barra de Navegação -->
+  
   <nav>
     <a href="#" class="brand">HF <span>SOFTWARE</span></a>
-    <div class="nav-links">
-      <a href="#section-1" class="nav-link">Início</a>
-      <a href="#solucoes" class="nav-link">Soluções</a>
-      <a href="#contato" class="nav-link">Contato</a>
-    </div>
+    <a href="#contato" class="nav-link">Iniciar Projeto</a>
   </nav>
 
-  <!-- Fundo 3D Interativo -->
+  
   <canvas id="webgl"></canvas>
 
-  <!-- Seção 1: Apresentação -->
+  
   <section class="section-left" id="section-1">
     <span class="tag">Inovação & Engenharia</span>
     <h2>Software inteligente para o futuro da sua empresa</h2>
-    <p class="lead">Criamos plataformas robustas, sistemas sob medida e experiências digitais escaláveis com arquitetura de ponta.</p>
+    <p>Criamos plataformas robustas, sistemas sob medida e experiências digitais escaláveis com arquitetura de ponta.</p>
     <a href="#contato" class="cta-btn">Solicitar Orçamento</a>
   </section>
 
-  <!-- Seção 2: Soluções & Serviços -->
-  <section class="section-center" id="solucoes">
-    <span class="tag">Nossas Especialidades</span>
-    <h2>Tecnologia construída para alta performance</h2>
-    <p class="lead">Arquiteturas flexíveis que acompanham o crescimento da sua empresa.</p>
-
-    <div class="services-grid">
-      <div class="service-card">
-        <div class="service-icon">🌐</div>
-        <h3>Sistemas Web & SaaS</h3>
-        <p>Plataformas web completas, painéis administrativos intuitivos e microsserviços rápidos, escaláveis e seguros.</p>
-      </div>
-
-      <div class="service-card">
-        <div class="service-icon">📱</div>
-        <h3>Aplicativos Mobile</h3>
-        <p>Apps nativos e híbridos de alta performance com design centrado na melhor experiência e engajamento do usuário.</p>
-      </div>
-
-      <div class="service-card">
-        <div class="service-icon">⚡</div>
-        <h3>Cloud & Automação</h3>
-        <p>Desenho de infraestrutura em nuvem, integração de APIs e pipelines de automação para acelerar entregas e reduzir custos.</p>
-      </div>
-    </div>
+ 
+  <section class="section-right" id="section-2">
+    <span class="tag">Arquitetura Moderna</span>
+    <h2>Performance, Segurança & Nuvem</h2>
+    <p>Desenvolvimento ágil com microsserviços, automação de processos e integrações que aceleram seus resultados operacionais.</p>
   </section>
 
-  <!-- Seção 3: Formulário de Contato -->
+  
   <section class="section-center" id="contato">
     <span class="tag">Iniciar Projeto</span>
     <h2>Fale com nossos engenheiros</h2>
-    <p class="lead">Envie os detalhes da sua ideia e entraremos em contato rapidamente.</p>
+    <p>Envie os detalhes da sua ideia e entraremos em contato rapidamente.</p>
 
     <div class="contact-container">
       <form id="contact-form" action="https://formspree.io/f/xaeypvqb" method="POST">
@@ -547,39 +355,7 @@
     </div>
   </section>
 
-  <!-- Rodapé (Footer) -->
-  <footer>
-    <div class="footer-top">
-      <div class="footer-info">
-        <a href="#" class="brand">HF <span>SOFTWARE</span></a>
-        <p>Engenharia de software moderna, arquitetura em nuvem e soluções sob medida para empresas que buscam liderança digital.</p>
-        <div class="footer-status">
-          <span class="status-dot"></span>
-          <span>Sistemas 100% operacionais</span>
-        </div>
-      </div>
-
-      <div class="footer-nav">
-        <span class="footer-nav-title">Navegação</span>
-        <a href="#section-1">Início</a>
-        <a href="#solucoes">Soluções & Serviços</a>
-        <a href="#contato">Fale Conosco</a>
-      </div>
-
-      <div class="footer-nav">
-        <span class="footer-nav-title">Atendimento</span>
-        <a href="https://wa.me/5575981832950" target="_blank" rel="noopener noreferrer">WhatsApp Direto</a>
-        <a href="#contato">Solicitar Orçamento</a>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <span>&copy; 2026 HF Software. Todos os direitos reservados.</span>
-      <span>Projetado com Three.js & GSAP</span>
-    </div>
-  </footer>
-
-  <!-- Botão Flutuante do WhatsApp -->
+  
   <a 
     href="https://wa.me/5575981832950?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20as%20solu%C3%A7%C3%B5es%20da%20HF%20Software!" 
     class="whatsapp-float" 
@@ -592,11 +368,11 @@
     </svg>
   </a>
 
-  <!-- Script Three.js + GSAP + Envio do Formulário -->
+  
   <script>
     gsap.registerPlugin(ScrollTrigger);
 
-    // 1. SETUP THREE.JS
+    
     const canvas = document.getElementById('webgl');
     const scene = new THREE.Scene();
 
@@ -604,11 +380,10 @@
     camera.position.z = 6.5;
 
     const renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true });
-    renderer.setClearColor(0x000000, 0);
+    renderer.setClearColor(0x000000, 0); // Transparência total
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
-    // 2. ILUMINAÇÃO REFINADA
     const ambientLight = new THREE.AmbientLight(0xffffff, 1.0);
     scene.add(ambientLight);
 
@@ -624,7 +399,7 @@
     rimLight.position.set(0, 5, -3);
     scene.add(rimLight);
 
-    // 3. MATERIAL METALIZADO COM BRILHO
+   
     const geometry = new THREE.TorusKnotGeometry(0.85, 0.28, 140, 32);
     const material = new THREE.MeshStandardMaterial({
       color: 0x141e33,
@@ -636,14 +411,13 @@
 
     mesh.position.set(1.9, 0, 0);
 
-    // 4. ANIMAÇÕES GSAP SCROLL
-    // Seção 2: Move para trás e sobe sutilmente para acomodar a grade de cards
+    
     gsap.to(mesh.position, {
-      x: 0,
-      y: 1.2,
-      z: -2.2,
+      x: -1.9,
+      y: 0.2,
+      z: 0.8,
       scrollTrigger: {
-        trigger: '#solucoes',
+        trigger: '#section-2',
         start: 'top bottom',
         end: 'top center',
         scrub: 1
@@ -654,18 +428,17 @@
       x: Math.PI * 1.5,
       y: Math.PI * 1.2,
       scrollTrigger: {
-        trigger: '#solucoes',
+        trigger: '#section-2',
         start: 'top bottom',
         end: 'top center',
         scrub: 1
       }
     });
 
-    // Seção 3: Afasta no eixo Z atrás do formulário
     gsap.to(mesh.position, {
       x: 0,
       y: 0,
-      z: -2.8,
+      z: -1.5,
       scrollTrigger: {
         trigger: '#contato',
         start: 'top bottom',
@@ -685,7 +458,7 @@
       }
     });
 
-    // 5. RENDER LOOP
+    
     const clock = new THREE.Clock();
     function animate() {
       requestAnimationFrame(animate);
@@ -695,7 +468,7 @@
     }
     animate();
 
-    // 6. RESPONSIVIDADE
+    
     window.addEventListener('resize', () => {
       camera.aspect = window.innerWidth / window.innerHeight;
       camera.updateProjectionMatrix();
@@ -712,7 +485,7 @@
       mesh.scale.set(0.6, 0.6, 0.6);
     }
 
-    // 7. ENVIO DO FORMULÁRIO VIA AJAX
+    
     const form = document.getElementById('contact-form');
     const status = document.getElementById('form-status');
     const submitBtn = document.getElementById('submit-button');
@@ -749,4 +522,5 @@
     });
   </script>
 </body>
+</html>
 </html>
